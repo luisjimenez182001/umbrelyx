@@ -1,0 +1,36 @@
+{
+    "en": {
+        "email": "info@example.com",
+        "phone": "+208-666-0112",
+        "language": "English",
+        "followUs": "Follow Us:",
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "pricing": "Pricing",
+        "contact": "Contact",
+        "getAQuote": "Get A Quote",
+        "pages": "Pages",
+        "blog": "Blog",
+        "faq": "Faq's",
+        "ourTeam": "Our Team",
+        "projects": "Projects"
+    },
+    "es": {
+        "email": "info@ejemplo.com",
+        "phone": "+208-666-0112",
+        "language": "Español",
+        "followUs": "Síguenos:",
+        "home": "Inicio",
+        "about": "Sobre nosotros",
+        "services": "Servicios",
+        "pricing": "Precios",
+        "contact": "Contacto",
+        "getAQuote": "Solicitar una cotización",
+        "pages": "Páginas",
+        "blog": "Blog",
+        "faq": "Preguntas frecuentes",
+        "ourTeam": "Nuestro equipo",
+        "projects": "Proyectos"
+    }
+}
