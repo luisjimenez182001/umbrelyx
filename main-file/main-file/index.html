@@ -8,13 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="ex-coders">
-    <meta name="description" content="Umbrelyx - IT Solution & Technology HTML Template">
+    <meta name="description" content="Umbrelyx">
     <!-- ======== Page title ============ -->
-    <title>Umbrelyx - IT Solution & Technology HTML Template</title>
+    <title>Umbrelyx</title>
 
 
     <!--<< Favicon >>-->
-    <link rel="shortcut icon" href="assets/img/favicon.svg">
+    <link rel="shortcut icon" href="assets/img/favicon_umbrelyx.svg">
 
     <!--<< Bootstrap min.css >>-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -41,6 +41,10 @@
     <link rel="stylesheet" href="assets/css/main.css">
 
 
+      <!--STYLE CHATBOOT-->
+      <link rel="stylesheet" href="assets/css/chatbot.css">
+
+      <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
 
    <style>
 
@@ -53,13 +57,61 @@
          margin-top: 1px; /* Ajusta según sea necesario para la sección de servicios */
       }
 
+      /* Cambiar el color de fondo del menú desplegable */
+      .nice-select {
+         background-color: #f0f0f0; /* Color de fondo del menú principal */
+         color: #333; /* Color del texto */
+      }
+
+      .nice-select .list {
+         background-color: #fff; /* Color de fondo del menú desplegable */
+         color: #333; /* Color del texto en las opciones */
+      }
+
+      .nice-select .option:hover {
+         background-color: #ddd; /* Color de fondo cuando el ratón pasa por encima */
+         color: #000; /* Color del texto cuando el ratón pasa por encima */
+      }
+
+      
+
 
    </style>
+
+   
+<!-- Vincula Font Awesome para los iconos si no lo tienes ya -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
 </head>
 
 <body>
+
+  
+  <!-- Botón flotante para abrir/cerrar el chatbot -->
+<div class="chatbot-circle" onclick="toggleChatbot()">
+   <i class="fas fa-comments"></i> <!-- Icono del chatbot -->
+</div>
+
+
+
+
+<!-- Ventana del chatbot -->
+<div class="chatbot-window" id="chatbot" style="display: none;">
+   <div class="chatbot-header">
+      <h3>Chatbot Umbrelyx</h3>
+       <button class="close-btn" onclick="toggleChatbot()">×</button>
+   </div>
+   <div class="chatbot-content" >
+      <iframe id="chatbot-iframe" frameborder="0"></iframe>
+   </div>
+   <div class="chatbot-input-container">
+       <input type="text" id="chat-input" placeholder="Escribe un mensaje..." />
+       <button onclick="sendMessage()">Enviar</button>
+   </div>
+</div>
+
+
 
    <!-- Preloader Start -->
    <div id="preloader" class="preloader">
@@ -125,7 +177,7 @@
                   <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                       <div class="offcanvas__logo">
                           <a href="index.html">
-                              <img src="assets/img/logo.svg" alt="logo-img">
+                              <img src="assets/img/logo_Umbrelyx.svg" alt="logo-img">
                           </a>
                       </div>
                       <div class="offcanvas__close">
@@ -210,10 +262,12 @@
                          </li>
                      </ul>
                      <div class="top-right">
+                        <!--
                          <div class="flag-wrap">
                              <div class="flag">
                                  <img src="assets/img/flag.png" alt="flag">
                              </div>
+                             
                              <div class="nice-select" tabindex="0">
                                  <span class="current">
                                      English
@@ -228,7 +282,8 @@
                                  </ul>
                              </div>
                          </div>
-                         <div class="social-icon d-flex align-items-center">
+                         -->
+                         <div class="social-icon d-flex align-items-left">
                              <span>Follow Us:</span>
                              <a href="#"><i class="fab fa-facebook-f"></i></a>
                              <a href="#"><i class="fab fa-twitter"></i></a>
@@ -338,8 +393,9 @@
                                  <li class="has-dropdown active menu-thumb">
                                     <a href="index.html">
                                        Home
-                                       <i class="fas fa-angle-down"></i>
+                                       <!--<i class="fas fa-angle-down"></i> -->
                                     </a>
+                                    <!--
                                     <ul class="submenu has-homemenu">
                                        <li>
                                           <div class="homemenu-items">
@@ -400,6 +456,7 @@
                                           </div>
                                        </li>
                                     </ul>
+                                    -->
                                  </li>
 
                                  <li>
@@ -412,7 +469,7 @@
                                     </a>
                                     <ul class="submenu">
                                        <li><a href="service.html">Services</a></li>
-                                       <li><a href="service-carousel.html">Service Carousel</a></li>
+                                       <!--<li><a href="service-carousel.html">Service Carousel</a></li> -->
                                        <li><a href="service-details.html">Service Details</a></li>
                                     </ul>
                                  </li>
@@ -441,12 +498,12 @@
                                           <ul class="submenu">
                                              <li><a href="team.html">Our Team</a></li>
                                              <li><a href="team-carousel.html">Team Carousel</a></li>
-                                             <li><a href="team-details.html">Team Details</a></li>
+                                            <!-- <li><a href="team-details.html">Team Details</a></li> -->
                                           </ul>
                                        </li>
-                                       <li><a href="pricing.html">Pricing</a></li>
-                                       <li><a href="faq.html">Faq's</a></li>
-                                       <li><a href="404.html">404 Page</a></li>
+                                       <!--<li><a href="pricing.html">Pricing</a></li> -->
+                                       <!--<li><a href="faq.html">Faq's</a></li> -->
+                                       <!--<li><a href="404.html">404 Page</a></li> -->
                                     </ul>
                                  </li>
                                  <li>
@@ -463,6 +520,28 @@
                                  <li>
                                     <a href="contact.html">Contact</a>
                                  </li>
+                                 <li>
+                                    <a href="">
+                                        <div class="flag" style="display: inline-block; vertical-align: middle;">
+                                            <img src="assets/img/flag.png" alt="flag" style="width: 16px; height: 16px; margin-right: 5px; position: relative; top: -2px;">
+                                        </div>
+                                        English
+                                        <i class="fas fa-angle-down"></i>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li>
+                                            <a href="">
+                                                <div class="flag" style="display: inline-block; vertical-align: middle;">
+                                                   <img src="assets/img/flag-mexico.png" alt="flag" style="width: 16px; height: 16px; margin-right: 5px; position: relative; top: -2px;">
+                                                </div>
+                                                Spanish
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+
+
                               </ul>
                            </nav>
                         </div>
@@ -470,7 +549,6 @@
                   </div>
                   <div class="header-right d-flex justify-content-end align-items-center">
                      <a href="#0" class="search-trigger search-icon"><i class="fal fa-search"></i></a>
-                     <a href="#0"><i class="fa-solid fa-cart-shopping"></i></a>
                      <div class="header-button ms-4">
                         <a href="contact.html" class="gt-btn">
                            <span>
@@ -884,12 +962,14 @@
                   </div>
                   <h5>Data Analysis</h5>
                </div>
+
                <div class="project-item-card style1 wow fadeInUp" data-wow-delay=".4s">
                   <div class="project-icon">
                      <img src="assets/img/icon/projectItemIcon1_2.svg" alt="icon">
                   </div>
                   <h5>UI/UX Designing</h5>
                </div>
+
                <div class="project-item-card style1 active wow fadeInUp" data-wow-delay=".6s">
                   <div class="project-icon">
                      <img src="assets/img/icon/projectItemIcon1_3.svg" alt="icon">
@@ -902,6 +982,7 @@
                   </div>
                   <h5>Wp Development</h5>
                </div>
+
                <div class="project-item-card style1 wow fadeInUp" data-wow-delay="1s">
                   <div class="project-icon">
                      <img src="assets/img/icon/projectItemIcon1_5.svg" alt="icon">
@@ -969,6 +1050,8 @@
                               </div>
                            </div>
 
+
+
                            <!-- SVG Mask -->
                            <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position: absolute;">
                               <clipPath id="projectContentdMask">
@@ -987,6 +1070,8 @@
          </div>
       </div>
    </section>
+
+   
 
    <!-- Video Section    S T A R T -->
    <div class="video-box-area wow fadeInUp" data-wow-delay="0.6s">
@@ -1482,7 +1567,6 @@
                                  <img class="thumbimg" src="assets/img/team/teamThumb1_1.png" alt="thumb">
 
 
-                                 <!-- SVG Mask -->
                                  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"
                                     style="position: absolute;">
                                     <clipPath id="teamCardMask">
@@ -1493,11 +1577,13 @@
                               </div>
 
                               <div class="team-content">
-                                 <h3><a href="team-details.html">Wade Warren</a></h3>
-                                 <p>Medical Assistant</p>
+                                 <h3><a href="team-details.html">Dioney Contreras</a></h3>
+                                 <p>Data Scientist</p>
                               </div>
                            </div>
                         </div>
+
+
                         <div class="swiper-slide">
                            <div class="team-card style1 img-custom-anim-left wow fadeInUp" data-wow-delay=".6s">
                               <div class="team-card-thumb">
@@ -1518,8 +1604,8 @@
                               </div>
 
                               <div class="team-content">
-                                 <h3><a href="team-details.html">Masirul Islam</a></h3>
-                                 <p>Manager Assistant</p>
+                                 <h3><a href="team-details.html">Eduardo Arenivas</a></h3>
+                                 <p>Data Scientist</p>
                               </div>
                            </div>
                         </div>
@@ -1529,7 +1615,7 @@
                                  <div class="shape1"><img src="assets/img/shape/teamCardShape1_1.png" alt="shape"></div>
                                  <div class="shape2"><img src="assets/img/shape/teamCardShape1_2.png" alt="shape"></div>
 
-                                 <img class="thumbimg" src="assets/img/team/teamThumb1_3.png" alt="thumb">
+                                 <img class="thumbimg" src="assets/img/team/jose_virgen_team__2_-removebg-preview.png" alt="thumb">
 
 
                                  <!-- SVG Mask -->
@@ -1543,8 +1629,8 @@
                               </div>
 
                               <div class="team-content">
-                                 <h3><a href="team-details.html">Jenny Wilson</a></h3>
-                                 <p>Web Designer</p>
+                                 <h3><a href="team-details.html">Jose Pulido</a></h3>
+                                 <p>Data Analysis</p>
                               </div>
                            </div>
                         </div>
@@ -1554,7 +1640,7 @@
                                  <div class="shape1"><img src="assets/img/shape/teamCardShape1_1.png" alt="shape"></div>
                                  <div class="shape2"><img src="assets/img/shape/teamCardShape1_2.png" alt="shape"></div>
 
-                                 <img class="thumbimg" src="assets/img/team/teamThumb1_4.png" alt="thumb">
+                                 <img class="thumbimg" src="assets/img/team/luisjimenez_team__1_-removebg-preview.png" alt="thumb">
 
 
                                  <!-- SVG Mask -->
@@ -1568,8 +1654,8 @@
                               </div>
 
                               <div class="team-content">
-                                 <h3><a href="team-details.html">Floyd Miles</a></h3>
-                                 <p>Head Assistant</p>
+                                 <h3><a href="team-details.html">Luis Jimenez</a></h3>
+                                 <p>Devoloper Fullstack</p>
                               </div>
                            </div>
                         </div>
@@ -1618,8 +1704,8 @@
                               </div>
 
                               <div class="team-content">
-                                 <h3><a href="team-details.html">Masirul Islam</a></h3>
-                                 <p>Manager Assistant</p>
+                                 <h3><a href="team-details.html">Arturo Escalante</a></h3>
+                                 <p>IT Manager</p>
                               </div>
                            </div>
                         </div>
@@ -1629,7 +1715,7 @@
                                  <div class="shape1"><img src="assets/img/shape/teamCardShape1_1.png" alt="shape"></div>
                                  <div class="shape2"><img src="assets/img/shape/teamCardShape1_2.png" alt="shape"></div>
 
-                                 <img class="thumbimg" src="assets/img/team/teamThumb1_3.png" alt="thumb">
+                                 <img class="thumbimg" src="assets/img/team/andres_gutierrez-removebg-preview.png" alt="thumb">
 
 
                                  <!-- SVG Mask -->
@@ -1643,8 +1729,8 @@
                               </div>
 
                               <div class="team-content">
-                                 <h3><a href="team-details.html">Jenny Wilson</a></h3>
-                                 <p>Web Designer</p>
+                                 <h3><a href="team-details.html">Andres  Gutierrez</a></h3>
+                                 <p>Devoloper Fullstack</p>
                               </div>
                            </div>
                         </div>
@@ -1654,7 +1740,7 @@
                                  <div class="shape1"><img src="assets/img/shape/teamCardShape1_1.png" alt="shape"></div>
                                  <div class="shape2"><img src="assets/img/shape/teamCardShape1_2.png" alt="shape"></div>
 
-                                 <img class="thumbimg" src="assets/img/team/teamThumb1_4.png" alt="thumb">
+                                 <img class="thumbimg" src="assets/img/team/hector_Personaje__1_-removebg-preview.png" alt="thumb">
 
 
                                  <!-- SVG Mask -->
@@ -1668,8 +1754,8 @@
                               </div>
 
                               <div class="team-content">
-                                 <h3><a href="team-details.html">Floyd Miles</a></h3>
-                                 <p>Head Assistant</p>
+                                 <h3><a href="team-details.html">Hector Sanchez</a></h3>
+                                 <p>Data Enginner</p>
                               </div>
                            </div>
                         </div>
@@ -1803,7 +1889,7 @@
       </div>
    </section>
 
-   <!-- Testimonial Section   S T A R T -->
+   <!-- Testimonial Section S T A R T -->
    <section class="testimonial-section space pb-0 fix wow fadeInUp" data-wow-delay=".5s"
       data-bg-src="assets/img/bg/testimonialBg1_1.png">
       <div class="testimonial-wrap style3 space">
@@ -1831,9 +1917,9 @@
                               <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
                               <li><img src="assets/img/icon/starIconRegular.png" alt="icon"></li>
                            </ul>
-                           <p class="text">"Extech has completely transformed our process. The user-friendly
-                              interface and powerful features maintaining our website. Highly recommended for
-                              all!"
+                           <p class="text">"Umbrelyx has been a game-changer for us! Their modular solutions and
+                              advanced analytics tools have streamlined our entire process, allowing us to focus on
+                              growth and efficiency. Highly recommended!"
                            </p>
                            <div class="profile-box">
                               <div class="testi-thumb">
@@ -1861,9 +1947,9 @@
                               <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
                               <li><img src="assets/img/icon/starIconRegular.png" alt="icon"></li>
                            </ul>
-                           <p class="text">"I've been using Extech for several months now, and I'm extremely
-                              impressed with the ease of customization it offers. The wide range of
-                              templates."
+                           <p class="text">"The integration of automation and analytics from Umbrelyx has made a
+                              huge impact on our productivity. The team is knowledgeable and offers excellent
+                              support, ensuring our needs are always met."
                            </p>
                            <div class="profile-box">
                               <div class="testi-thumb">
@@ -1871,7 +1957,7 @@
                               </div>
                               <div class="testi-content">
                                  <h3 class="title">Theresa Webb</h3>
-                                 <div class="designation">Tech enthusiast</div>
+                                 <div class="designation">Tech Enthusiast</div>
                               </div>
                            </div>
                            <div class="quote">
@@ -1889,11 +1975,11 @@
                               <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
                               <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
                               <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                              <li><img src="assets/img/icon/starIconRegular.png" alt="icon"></li>
+                              <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
                            </ul>
-                           <p class="text">"Extech offers exceptional value for money. The comprehensive suite
-                              of tools and seamless integration with various plugins and services make it a
-                              for all "
+                           <p class="text">"Umbrelyx Corporation has been instrumental in our business
+                              transformation. Their ability to adapt and provide tailored solutions for our
+                              industry has given us a competitive edge. Fantastic team and service!"
                            </p>
                            <div class="profile-box">
                               <div class="testi-thumb">
@@ -1901,7 +1987,7 @@
                               </div>
                               <div class="testi-content">
                                  <h3 class="title">Ronald Richards</h3>
-                                 <div class="designation">Web Enterprenuor</div>
+                                 <div class="designation">Web Entrepreneur</div>
                               </div>
                            </div>
                            <div class="quote">
@@ -1921,9 +2007,9 @@
                               <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
                               <li><img src="assets/img/icon/starIconRegular.png" alt="icon"></li>
                            </ul>
-                           <p class="text">"Extech has completely transformed our process. The user-friendly
-                              interface and powerful features maintaining our website. Highly recommended for
-                              all!"
+                           <p class="text">"Working with Umbrelyx has been a breath of fresh air! Their scalable
+                              solutions easily fit into our systems, and the level of customization is
+                              unparalleled. We’re thrilled with the results."
                            </p>
                            <div class="profile-box">
                               <div class="testi-thumb">
@@ -1949,11 +2035,10 @@
                               <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
                               <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
                               <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                              <li><img src="assets/img/icon/starIconRegular.png" alt="icon"></li>
+                              <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
                            </ul>
-                           <p class="text">"I've been using Extech for several months now, and I'm extremely
-                              impressed with the ease of customization it offers. The wide range of
-                              templates."
+                           <p class="text">I am truly impressed by Umbrelyx’s unwavering dedication to quality and innovation. 
+                              Their solutions are remarkably adaptable and intuitive, revolutionizing our business operations. 
                            </p>
                            <div class="profile-box">
                               <div class="testi-thumb">
@@ -1961,7 +2046,7 @@
                               </div>
                               <div class="testi-content">
                                  <h3 class="title">Theresa Webb</h3>
-                                 <div class="designation">Tech enthusiast</div>
+                                 <div class="designation">Tech Enthusiast</div>
                               </div>
                            </div>
                            <div class="quote">
@@ -1981,9 +2066,9 @@
                               <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
                               <li><img src="assets/img/icon/starIconRegular.png" alt="icon"></li>
                            </ul>
-                           <p class="text">"Extech offers exceptional value for money. The comprehensive suite
-                              of tools and seamless integration with various plugins and services make it a
-                              for all "
+                           <p class="text">"From automation to analytics, Umbrelyx offers the best in technology
+                              solutions for our industry. Their specialized approach has allowed us to grow and
+                              improve at every level. Umbrelyx truly understands business needs!"
                            </p>
                            <div class="profile-box">
                               <div class="testi-thumb">
@@ -1991,7 +2076,7 @@
                               </div>
                               <div class="testi-content">
                                  <h3 class="title">Ronald Richards</h3>
-                                 <div class="designation">Web Enterprenuor</div>
+                                 <div class="designation">Web Entrepreneur</div>
                               </div>
                            </div>
                            <div class="quote">
@@ -2009,6 +2094,7 @@
          </div>
       </div>
    </section>
+
 
    <!-- Blog Section    S T A R T -->
    <section class="blog-section space fix">
@@ -2253,7 +2339,7 @@
                         <h3 class="widget_title">Quick Links</h3>
                         <div class="menu-all-pages-container">
                            <ul class="menu">
-                              <li><a href="about.html"><i class="fa-solid fa-chevrons-right"></i>Extech About</a>
+                              <li><a href="about.html"><i class="fa-solid fa-chevrons-right"></i>Umbrelyx About</a>
                               </li>
                               <li><a href="service.html"><i class="fa-solid fa-chevrons-right"></i>Our Services</a>
                               </li>
@@ -2378,6 +2464,15 @@
    <script src="assets/js/wow.min.js"></script>
    <!--<< Main.js >>-->
    <script src="assets/js/main.js"></script>
+
+   
+
+
+   <!--CHATBOT SCRIPT-->
+   <script src="assets/js/api_chatbot.js"></script>
+
+
+
 </body>
 
 </html>

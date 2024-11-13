@@ -1,0 +1,181 @@
+/* Botón flotante del chatbot */
+.chatbot-circle {
+    width: 50px; /* Reducir el tamaño */
+    height: 50px; /* Reducir el tamaño */
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px; /* Reducir el espacio desde la parte inferior */
+    right: 20px; /* Reducir el espacio desde la derecha */
+    font-size: 20px; /* Reducir el tamaño del icono */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Reducir el tamaño de la ventana del chatbot */
+/* Ajustar el tamaño de la ventana del chatbot */
+.chatbot-window {
+    width: 400px; /* Ancho de la ventana */
+    height: 500px; /* Aumenta la altura si es necesario */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 70px;
+    right: 15px;
+    background-color: white;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Reducir el tamaño del encabezado */
+/* Asegúrate de que el encabezado tenga suficiente espacio */
+/* Ajuste del encabezado para asegurar visibilidad */
+.chatbot-header {
+    background-color: #007bff;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 14px; /* Ajusta el tamaño de la fuente del encabezado */
+    font-weight: bold; /* Negritas para que sea más visible */
+    z-index: 1000;
+}
+
+.chatbot-header h3 {
+    margin: 0;
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    font-weight: bold; /* Asegura que el texto se vea en negritas */
+}
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer;
+    z-index: 1001; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+
+/* Contenedor del contenido del chatbot */
+.chatbot-content {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #000;
+    max-height: calc(100% - 100px); /* Ajustar el espacio para el input */
+}
+
+/* Asegura que todo el texto dentro del contenido del chatbot sea oscuro */
+.chatbot-content {
+    color: #000; /* Color negro para todo el texto */
+}
+
+/* Asegura que los elementos <strong> y <b> también sean negros y en negritas */
+.chatbot-content strong,
+.chatbot-content b {
+    color: #000; /* Cambia el color a negro */
+    font-weight: bold; /* Asegura que estén en negritas */
+}
+
+
+/* Ajusta el tamaño de los encabezados en el contenido del chatbot */
+.chatbot-content h1 {
+    font-size: 1px; /* Ajusta según lo que desees */
+}
+
+.chatbot-content h2 {
+    font-size: 10px; /* Ajusta según lo que desees */
+}
+
+.chatbot-content h3 {
+    font-size: 10px; /* Ajusta según lo que desees */
+}
+
+.chatbot-content h {
+    font-size: 10px; /* Ajusta según lo que desees */
+}
+
+.chatbot-content p {
+    font-size: 40px; /* Tamaño de fuente para los párrafos */
+}
+
+
+.chatbot-content p,
+.chatbot-content h4 {
+    font-size: 9px; /* Reducir el tamaño de la fuente */
+    line-height: 1.2;
+}
+
+.chatbot-content::-webkit-scrollbar {
+    width: 8px; /* Reducir el ancho del scroll */
+}
+
+.chatbot-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.chatbot-content::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+}
+
+/* Ajustar el contenedor de entrada de mensaje */
+/* Ajustar el contenedor de entrada de mensaje */
+.chatbot-input-container {
+    border-top: 1px solid #ddd;
+    padding: 10px; /* Espacio interno */
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    height: 60px; /* Fijar la altura para asegurarse de que sea visible */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+#chat-input {
+    color: #000; /* Cambia el color del texto a negro */
+    background-color: #fff; /* Asegúrate de que el fondo sea blanco */
+    border: none;
+    padding: 6px;
+    font-size: 10px;
+}
+
+#chat-input:focus {
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 10px; /* Reducir el tamaño del botón */
+    cursor: pointer;
+    font-size: 10px; /* Reducir el tamaño de la fuente */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estado colapsado de la ventana del chatbot */
+.chatbot-window.collapsed {
+    height: 40px; /* Altura cuando está colapsado */
+    overflow: hidden;
+}
