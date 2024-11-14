@@ -80,9 +80,21 @@
     max-height: calc(100% - 100px); /* Ajustar el espacio para el input */
 }
 
+.chatbot-content p, 
+.chatbot-content h1, 
+.chatbot-content h2, 
+.chatbot-content h3, 
+.chatbot-content h4, 
+.chatbot-content h5, 
+.chatbot-content h6, 
+.chatbot-content strong, 
+.chatbot-content b {
+    color: #000; /* Asegúrate de que todos estos elementos sean negros */
+}
+
 /* Asegura que todo el texto dentro del contenido del chatbot sea oscuro */
 .chatbot-content {
-    color: #000; /* Color negro para todo el texto */
+    color: #000 !important; /* Forzar el color negro */
 }
 
 /* Asegura que los elementos <strong> y <b> también sean negros y en negritas */
@@ -99,27 +111,36 @@
 }
 
 .chatbot-content h2 {
-    font-size: 10px; /* Ajusta según lo que desees */
+    font-size: 15px; /* Ajusta según lo que desees */
 }
 
 .chatbot-content h3 {
-    font-size: 10px; /* Ajusta según lo que desees */
+    font-size: 15px; /* Ajusta según lo que desees */
 }
 
-.chatbot-content h {
-    font-size: 10px; /* Ajusta según lo que desees */
+.chatbot-content h5 {
+    font-size: 15px; /* Ajusta según lo que desees */
 }
 
-.chatbot-content p {
-    font-size: 40px; /* Tamaño de fuente para los párrafos */
-}
 
 
 .chatbot-content p,
 .chatbot-content h4 {
-    font-size: 9px; /* Reducir el tamaño de la fuente */
+    font-size: 12px; /* Reducir el tamaño de la fuente */
     line-height: 1.2;
 }
+
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre botones */
+    padding: 10px;
+    background-color: #f1f1f1;
+    justify-content: space-around; /* Distribuir los botones */
+    z-index: 10; /* Asegura que los botones estén por encima del iframe */
+    position: relative; /* Necesario para que z-index funcione */
+}
+
 
 .chatbot-content::-webkit-scrollbar {
     width: 8px; /* Reducir el ancho del scroll */
@@ -178,4 +199,11 @@ button:hover {
 .chatbot-window.collapsed {
     height: 40px; /* Altura cuando está colapsado */
     overflow: hidden;
+}
+
+
+
+.iframe-container {
+    z-index: 1;
+    position: relative;
 }
